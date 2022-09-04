@@ -2,8 +2,6 @@ package core
 
 import "os"
 
-var downloadsState *DownloadsState
-
 func Start() error {
 	downloadPath, err := GetDownloadPath("")
 	if err != nil {
@@ -28,10 +26,6 @@ func Start() error {
 		if err != nil {
 			return err
 		}
-	}
-
-	downloadsState = &DownloadsState{
-		InProgressDownloads: 0,
 	}
 
 	return nil

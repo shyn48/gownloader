@@ -1,5 +1,7 @@
 package gui
 
+// TODO REFACTOR THIS MESS OF A FILE!!!
+
 var (
 	inputWindowShown = false
 	enterUrlError    = ""

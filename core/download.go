@@ -249,8 +249,6 @@ func GetFileDetails(link string) (name string, size int, err error) {
 func StartDownload(link string) error {
 	startTime := time.Now()
 
-	downloadsState.InProgressDownloads++
-
 	d := Download{
 		Url:          link,
 		TotalSection: 20,
@@ -275,8 +273,6 @@ func StartDownload(link string) error {
 	}
 
 	fmt.Printf("Download took %s\n", time.Since(startTime))
-
-	downloadsState.InProgressDownloads--
 
 	return nil
 }
